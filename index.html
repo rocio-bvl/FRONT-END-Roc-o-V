@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Avisa al navegador que el doc está escrito en html.-->
+<html lang="es"> <!-- Abre el documento. lang="es" establece que 
+    la página está en español.-->
+
+<head> <!-- Inicia sección head, donde se colocan configuraciones y enlaces 
+    externos. No se muestra en pantalla.-->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres. Permite mostrar Ñ, tildes 
+        y símbolos sin errores.-->
+    
+    <!-- Hace que la página se adapte a pantallas pequeñas (celulares/tablets).
+    width=device-width: usa el ancho del dispositivo. initial-scale=1.0: escala inicial al 100%.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SportClub</title> <!-- Define el texto que aparece en la pestaña del navegador.-->
+
+    <!-- Se llama a la hoja de estilos desde la carpeta css.-->
+    <link rel="stylesheet" href="css/styles.css">
+</head> <!-- Cierra la sección de configuración.-->
+
+<body> <!-- Inicia el cuerpo de la página, donde va todo lo que si verá el usuario.-->
+
+    <main class="container"> <!-- class="container" permite aplicar estilos desde CSS.-->
+
+        <!-- Se toma el logo desde la carpeta img. class="logo" permite darle ancho, márgenes, etc.-->
+        <img src="img/logo_empresa_letra_v1.png" alt="Logo SportClub" class="logo">
+
+        <form class="card"> <!-- Inicia un formulario. class="card" aplica estilos para 
+            convertirlo en una tarjeta visual.-->
+            <h2>Iniciar Sesión</h2> <!-- Título del formulario (encabezado nivel 2).-->
+
+            <!-- <label> agrupa un nombre para un campo. for="correo" conecta el label con el 
+                input cuyo id es “correo”.-->
+            <label for="correo">Correo electrónico</label>
+            <!-- type="email" pide un correo válido. placeholder muestra texto guía.-->
+            <input type="email" id="correo" placeholder="Ingresa tu correo"> 
+
+            <label for="password">Contraseña</label> <!-- Etiqueta del campo contraseña.-->
+            <!-- type="password" oculta los caracteres ingresados.-->
+            <input type="password" id="password" placeholder="Ingresa tu contraseña">
+
+            <!-- Crea un botón que envía el formulario.-->
+            <button type="submit">Ingresar</button>
+
+            <div class="links"> <!-- Contenedor para agrupar los enlaces.-->
+                <a href="#">¿Olvidaste tu contraseña?</a> <!-- Link para recuperación de contraseña.-->
+                <a href="#">Crear cuenta</a> <!-- Link para registro.-->
+            </div>
+        <!-- Se cierran las etiquetas abiertas.-->
+        </form>
+
+    </main>
+
+</body>
+</html>
