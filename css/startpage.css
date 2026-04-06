@@ -1,0 +1,66 @@
+/* ===== Estilos generales ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4b1f6f;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+.bienvenida {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.bienvenida h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+
+/* ===== Botón Iniciar Sesión ===== */
+.boton-login {
+    background-color: #4b1f6f;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-login:hover {
+    background-color: #351650;
+}

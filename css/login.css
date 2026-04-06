@@ -1,0 +1,87 @@
+/* ======== ESTILOS BÁSICOS ======== */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Cambia la tipografía */
+    background-color: #f2f2f2; /* Color de fondo */
+    margin: 0; 
+    padding: 0; /* margin y padding elimina márgenes por defecto 
+    del navegador (recomendación común en CSS)*/
+}
+
+/* Contenedor centrado */
+.container {
+    height: 100vh; /* Usa el 100% del alto de la pantalla */
+    display: flex; /* Activa el modelo de cajas flexibles */
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+/* Logo */
+.logo { /* Ajusta el tamaño */
+    width: 260px;
+    margin-bottom: 20px; /* Separa el logo del formulario */
+}
+
+/* Card del formulario */
+.card {
+    background: white; /* Fondo del recuadro */
+    width: 320px; /* Ancho fijo */
+    padding: 25px; /* Crea espacio interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Agrega sombra */
+    display: flex; 
+    flex-direction: column; /* (+display) organiza contenidos en columna */
+}
+
+/* Título */
+.card h2 {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Separa del siguiente elemento */
+}
+
+/* Labels e inputs */
+.card label {
+    margin-top: 10px; /* Da espacio vertical */
+    font-weight: bold; /* Resalta el texto */
+}
+
+.card input {
+    padding: 10px; /* Espacio interno para que el texto no quede pegado */
+    margin-top: 5px; /* Separa cada input */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Crea el borde. Tamaño, estilo, color */
+    border-radius: 5px; /* Redondea las esquinas del borde */
+}
+
+/* Botón */
+button {
+    padding: 12px; /* Agranda el botón */
+    background-color: #4b1f6f; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el puntero a "mano" */
+    margin-top: 10px; /* Separa del input anterior */
+}
+
+button:hover { /* Cambia el color al pasar el mouse (pseudo clase :hover) */
+    background-color: #351650;
+}
+
+/* Links */
+.links { /* Agrupa los enlaces. Los coloca en columna */
+    margin-top: 15px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;c /* Centrados visualmente */
+}
+
+.links a { /* Estilo de los enlaces */
+    color: #4b1f6f;
+    text-decoration: none; /* Elimina el subrayado */
+    margin: 4px 0;
+}
+
+.links a:hover {
+    text-decoration: underline; /* Hace subrayado al pasar el mouse */
+}
