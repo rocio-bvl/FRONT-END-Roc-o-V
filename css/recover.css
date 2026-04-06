@@ -1,10 +1,8 @@
-/* ======== ESTILOS BÁSICOS ======== */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Cambia la tipografía */
-    background-color: #f2f2f2; /* Color de fondo */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
     margin: 0; 
-    padding: 0; /* margin y padding elimina márgenes por defecto 
-    del navegador (recomendación común en CSS)*/
+    padding: 0;
 }
 
 /* Contenedor centrado */
@@ -25,11 +23,11 @@ body {
 /* Card del formulario */
 .card {
     background: white;
-    width: 320px;
-    padding: 25px;
+    width: 320px; 
+    padding: 25px; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: flex;
+    display: flex; 
     flex-direction: column;
 }
 
@@ -49,14 +47,14 @@ body {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; 
     border-radius: 5px;
 }
 
 /* Botón */
 button {
     padding: 12px;
-    background-color: #4b1f6f;
+    background-color: #4b1f6f; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -64,24 +62,6 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+button:hover { 
     background-color: #351650;
-}
-
-/* Links */
-.links {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.links a {
-    color: #4b1f6f;
-    text-decoration: none;
-    margin: 4px 0;
-}
-
-.links a:hover {
-    text-decoration: underline;
 }
