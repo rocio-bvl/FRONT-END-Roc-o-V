@@ -4,44 +4,54 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
+    color: #333;
 }
 
 .header {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #4b1f6f, #8348b8);
     text-align: center;
-    padding: 20px;
+    color:white;
+    padding: 40px 20px;
     border-bottom: 1px solid #ccc;
 }
 
 .logo {
-    width: 250px;
+    width: 230px;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto;
 }
 
 nav {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 2.7px;
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 10px;
     text-decoration: none;
-    color: #4b1f6f;
+    color: white;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #F2B705;
 }
 
 /* Contenido principal */
 .bienvenida {
+    max-width: 700px;
+    margin: -40px auto;
+    background-color: white;
     text-align: center;
     padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bienvenida h2 {
     margin-bottom: 10px;
+    color: #4b1f6f;
 }
 
 footer {
@@ -49,18 +59,56 @@ footer {
     text-align: center;
     padding: 15px;
     border-top: 1px solid #ccc;
+    color: #F2B705;
 }
 
 /* ===== Botón Iniciar Sesión ===== */
 .boton-login {
-    background-color: #4b1f6f;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
+    background-color: #f2b705 ;
+    color: #4b1f6f;
+    padding: 8px 16px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
 }
 
 .boton-login:hover {
-    background-color: #351650;
+    background-color: #ffd24d;
+    color: #4b1f6f;
+}
+
+/* ===== Sección presentación ===== */
+.intro {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    color: #f2f2f2;
+}
+
+.intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.frase-final {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 2px solid #4b1f6f;
+    color: #4b1f6f;
 }

@@ -37,12 +37,14 @@ body {
 .card h2 {
     text-align: center; /* Centra el texto */
     margin-bottom: 20px; /* Separa del siguiente elemento */
+    color: #2E1A47;
 }
 
 /* Labels e inputs */
 .card label {
     margin-top: 10px; /* Da espacio vertical */
     font-weight: bold; /* Resalta el texto */
+    color: #F2B705;
 }
 
 .card input {
@@ -62,10 +64,12 @@ button {
     border-radius: 5px;
     cursor: pointer; /* Cambia el puntero a "mano" */
     margin-top: 10px; /* Separa del input anterior */
+    font-weight: bold;
+    font-size: 14.5px;
 }
 
 button:hover { /* Cambia el color al pasar el mouse (pseudo clase :hover) */
-    background-color: #351650;
+    background-color: #8348b8;
 }
 
 /* Links */

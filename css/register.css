@@ -35,12 +35,14 @@ body {
 .card h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #2E1A47;
 }
 
 /* Labels e inputs */
 .card label {
     margin-top: 10px;
     font-weight: bold;
+    color: #F2B705;
 }
 
 .card input {
@@ -54,16 +56,18 @@ body {
 /* Botón */
 button {
     padding: 12px;
-    background-color: #4b1f6f; 
+    background-color:#4b1f6f; 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    font-weight: bold;
+    font-size: 14.5px;
 }
 
 button:hover { 
-    background-color: #351650;
+    background-color: #8348b8;
 }
 
 .link {
@@ -73,12 +77,12 @@ button:hover {
     text-align: center;c /* Centrados visualmente */
 }
 
-.links a { /* Estilo de los enlaces */
+.link { /* Estilo de los enlaces */
     color: #4b1f6f;
     text-decoration: none; /* Elimina el subrayado */
-    margin: 4px 0;
+    margin: 15px 0;
 }
 
-.links a:hover {
+.link:hover {
     text-decoration: underline; /* Hace subrayado al pasar el mouse */
 }
