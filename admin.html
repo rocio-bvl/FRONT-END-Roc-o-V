@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <img src="img/logo_empresa_letra_v1.png" class="logo">
+
+    <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Usuarios</a>
+        <a href="#">Estadísticas</a>
+        <a href="#">Configuración</a>
+    </nav>
+
+    <div class="acciones">
+        <button class="editar">Editar perfil</button>
+        <button class="cerrar">Cerrar sesión</button>
+    </div>
+</header>
+
+<main class="dashboard">
+    <h1 class="titulo">Panel de Administración</h1>
+
+    <section class="grid-admin">
+
+        <!-- Gestión de Usuarios -->
+        <div class="card usuarios">
+            <h3>Gestión de Usuarios</h3>
+
+            <input type="text" placeholder="Buscar usuario...">
+
+            <ul class="lista-usuarios">
+                <li>
+                    <span>Nombre</span>
+                    <span>Email</span>
+                    <span>Rol</span>
+                    <button>Editar</button>
+                </li>
+                <li>
+                    <span>Nombre</span>
+                    <span>Email</span>
+                    <span>Coach</span>
+                    <button>Editar</button>
+                </li>
+                <li>
+                    <span>Nombre</span>
+                    <span>Email</span>
+                    <span>Admin</span>
+                    <button>Editar</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="card estadisticas">
+            <h3>Estadísticas del Sistema</h3>
+
+            <div class="grafico">
+                <div class="circulo"></div>
+                <ul class="datos">
+                    <li>Total usuarios: 120</li>
+                    <li>Total clases: 35</li>
+                    <li>Reservas activas: 58</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Reportes -->
+        <div class="card reportes">
+            <h3>Reportes Generales</h3>
+
+            <ul class="reporte">
+                <li>
+                    <span>Informe Mensual</span>
+                    <button>Descargar</button>
+                </li>
+                <li>
+                    <span>Abril</span>
+                    <button>Descargar</button>
+                </li>
+            </ul>
+
+        </div>
+        <!-- Configurar -->
+        <div class="card configurar">
+            <button class="configurar">Configurar el sistema</button>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>

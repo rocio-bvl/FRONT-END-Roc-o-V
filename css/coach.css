@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dbebde;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #32be39;
+    padding: 15px 25px;
+    color: white;
+}
+
+.logo {
+    width: 160px;
+}
+
+.menu a {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #2e7d32;
+}
+
+.acciones button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.editar:hover {
+    background-color: #d3dbd2;
+}
+
+.cerrar {
+    background-color: #057414;
+    color: white;
+}
+
+.cerrar:hover {
+    background-color: #054217;
+}
+
+.grid-coach {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.dashboard {
+    padding: 30px;
+}
+
+.titulo {
+    margin-bottom: 19px;
+    margin-top: 1.5px;
+    margin-left: 5px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #92be99;
+    font-size: 26px;
+}
+
+.bienvenida {
+    margin-bottom: 19px;
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 21px;
+}
+
+/* Cards generales */ 
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin-top: 7px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    color: #2e7d32;
+}
+
+.icono-alumno {
+    width: 30px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+/* Alumnos */
+.alumno-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: auto;
+}
+
+.texto-alumno {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.lista-alumnos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-alumnos li {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.lista-alumnos button {
+    padding: 5px 11px;
+    margin-left: 10px;
+    border: none;
+    background-color: #9eff9e;
+    border-radius: 6.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #046d0e;
+}
+
+.lista-alumnos button:hover {
+    background-color: #0da10d;
+    color: white;
+}
+
+.horario {
+    margin-top: 15px;
+}
+
+.horario .fila {
+    display: grid;
+    grid-template-columns: 70px repeat(5, 1fr) 120px;
+}
+
+.horario span {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Quitar línea derecha a la última columna */
+.horario span:last-child {
+    border-right: none;
+}
+
+/* Quitar línea de abajo a la última fila */
+.horario .fila:last-child span {
+    border-bottom: none;
+}
+
+/* Encabezados */
+.horario .encabezado span {
+    font-weight: bold;
+}
+
+/* Columna hora */
+.horario .hora {
+    font-weight: bold;
+}
+
+.horario button {
+    padding: 5px 11px;
+    margin-left: 10px;
+    border: none;
+    background-color: #9eff9e;
+    border-radius: 6.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #046d0e;
+    white-space: nowrap;
+}
+
+.horario button:hover {
+    background-color: #0da10d;
+    color: white;
+}

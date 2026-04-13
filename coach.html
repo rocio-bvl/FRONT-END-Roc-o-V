@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Coach</title>
+
+    <link rel="stylesheet" href="css/coach.css">
+</head>
+
+
+<body>
+    <header class="topbar">
+        <img src="img/logo_empresa_letra_v1.png" class="logo">
+
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Mis Alumnos</a>
+            <a href="#">Mi Horario</a>
+            <a href="#">Reportes</a>
+        </nav>
+
+        <div class="acciones">
+            <button class="editar">Editar perfil</button>
+            <button class="cerrar">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <h1 class="titulo">Panel de Entrenador</h1>
+        <h2 class="bienvenida">Bienvenido, Coach ---</h2>
+
+        <div class="grid-coach">
+
+            <!-- Alumnos -->
+            <div class="card alumnos">
+                <h3>Mis Alumnos</h3>
+
+                <ul class="lista-alumnos">
+                    <li>
+                        <div class="alumno-info">
+                            <div class="icono-alumno"></div>
+                            <div class="texto-alumno">
+                                <span>Nombre</span>
+                            </div>
+                        </div>
+                        <button>Ver Progreso</button>
+                    </li>
+                    <li>
+                        <div class="alumno-info">
+                            <div class="icono-alumno"></div>
+                            <div class="texto-alumno">
+                                <span>Email</span>
+                            </div>
+                        </div>
+                        <button>Ver Progreso</button>
+                    </li>
+                    <li>
+                        <div class="alumno-info">
+                            <div class="icono-alumno"></div>
+                            <div class="texto-alumno">
+                                <span>Email</span>
+                            </div>
+                        </div>
+                        <button>Ver Progreso</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Horario Semanal -->
+            <div class="card horario">
+                    <h3>Mi Horario</h3>
+
+                <div class="horario">
+                    
+                    <!-- Encabezados -->
+                    <div class="fila encabezado">
+                        <span></span>
+                        <span>Lunes</span>
+                        <span>Martes</span>
+                        <span>Miércoles</span>
+                        <span>Jueves</span>
+                        <span>Viernes</span>
+                        <span>Detalles</span>
+                    </div>
+                    <!-- Fila 1 -->
+                    <div class="fila">
+                        <span class="hora">18:00</span>
+                        <span>Spinning</span>
+                        <span>CrossFit</span>
+                        <span>—</span>
+                        <span>Boxeo</span>
+                        <span>—</span>
+                        <span><button>Ver Detalles</button></span>
+                    </div>
+                    <!-- Fila 2 -->
+                    <div class="fila">
+                        <span class="hora">19:00</span>
+                        <span>Yoga</span>
+                        <span>—</span>
+                        <span>CrossFit</span>
+                        <span>—</span>
+                        <span>Spinning</span>
+                        <span><button>Ver Detalles</button></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>

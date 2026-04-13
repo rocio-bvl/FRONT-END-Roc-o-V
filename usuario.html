@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Usuario</title>
+
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+
+
+<body>
+    <header class="topbar">
+        <img src="img/logo_empresa_letra_v1.png" class="logo">
+
+        <nav class="menu">
+            <a href="startpage.html">Inicio</a>
+            <a href="#">Clases</a>
+            <a href="#">Reservas</a>
+            <a href="#">Mi Progreso</a>
+        </nav>
+
+        <div class="acciones">
+            <button class="editar">Editar perfil</button>
+            <button class="cerrar">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <h2 class="bienvenida">Bienvenido a SportClub</h2>
+
+        <section class="grid-usuario">
+
+        <!-- Perfil usuario -->
+            <div class="card perfil">
+                <h3>Mi Perfil</h3>
+
+                <div class="perfil-info">
+                    <div class="icono-perfil"></div>
+
+                    <div class="datos">
+                        <label>Nombre:</label>
+                        <div class="nombre">Juan Pérez</div>
+
+                        <label>Email:</label>
+                        <div class="correo">juan@mail.com</div>
+                    </div>
+                </div>
+
+                <div class="objetivos">
+                    <h4>Objetivos personales:</h4>
+                    <ul>
+                        <li>Mejorar resistencia</li>
+                        <li>Aumentar fuerza</li>
+                        <li>Mantener constancia</li>
+                    </ul>
+                </div>
+            </div>
+
+        <!-- Progreso -->
+            <div class="card progreso">
+                <h3>Progreso</h3>
+
+                <div class="progreso-contenido">
+                    <div class="grafico">
+                        <span>70%</span>
+                    </div>
+
+                    <div class="avance">
+                        <h4>Avance:</h4>
+                        <ul>
+                            <li>Fuerza</li>
+                            <li>Resistencia</li>
+                            <li>Flexibilidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Clases disponibles -->
+            <div class="card clases">
+                    <h3>Clases Disponibles</h3>
+
+                <ul class="lista-clases">
+                    <li>
+                        <span>Spinning</span>
+                        <button>Reservar</button>
+                    </li>
+                    <li>
+                        <span>CrossFit</span>
+                        <button>Reservar</button>
+                    </li>
+                    <li>
+                        <span>Yoga</span>
+                        <button>Reservar</button>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- Clases reservadas -->
+            <div class="card reservas">
+                <h3>Clases Reservadas</h3>
+
+                <ul>
+                    <li>CrossFit – Lunes 18:00</li>
+                    <li>Yoga – Miércoles 19:00</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>

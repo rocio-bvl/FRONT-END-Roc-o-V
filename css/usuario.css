@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ccd9e8;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e88e5;
+    padding: 15px 25px;
+    color: white;
+}
+
+.logo {
+    width: 160px;
+}
+
+.menu a {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #0d47a1;
+}
+
+.acciones button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.editar:hover {
+    background-color: #c4cad6;
+}
+
+.cerrar {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.cerrar:hover {
+    background-color: #0a2c5e;
+}
+
+.dashboard {
+    padding: 30px;
+}
+
+.bienvenida {
+    margin-bottom: 19px;
+    margin-top: 3px;
+    margin-left: 5px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #929bbe;
+}
+
+/* Grid principal */
+.grid-usuario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "perfil progreso clases"
+        "perfil reservas reservas";
+    gap: 20px;
+}
+
+/* Cards generales */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin-top: 7px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+    font-size: 18px;
+    color: #0d47a1;
+}
+
+/* Áreas */
+.perfil { grid-area: perfil; }
+.progreso { grid-area: progreso; }
+.clases { grid-area: clases; }
+.reservas { grid-area: reservas; }
+
+/* Perfil */
+.perfil-info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.icono-perfil {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.datos label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+
+.nombre {
+    background-color: #f4f6fb;
+    border: 1px solid #cfd6e6;
+    border-radius: 6px;
+    padding: 6px 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.correo {
+    margin-top: 6px;
+    margin-left: 3px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+}
+
+.objetivos h4 {
+    color: #1e88e5;
+}
+
+.objetivos ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.objetivos li {
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.progreso-contenido {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.grafico {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#1e88e5 70%, #a3d4ff 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #131b8e;
+}
+
+.avance {
+    margin-top: 2px;
+    background-color: #f4f6fb;
+    border: 1px solid #cfd6e6;
+    border-radius: 10px;
+    padding: 10px 15px;
+    min-width: 135px;
+}
+
+.avance h4 {
+    margin-top: 8px;
+    color:#1e88e5
+}
+
+.avance ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Clases disponibles */
+.lista-clases {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-clases li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.lista-clases button {
+    padding: 5px 11px;
+    margin-left: 10px;
+    border: none;
+    background-color: #9ed0ff;
+    border-radius: 6.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #002d70;
+}
+
+.lista-clases button:hover {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.reservas ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.reservas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9dbf7;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8008c1;
+    padding: 15px 25px;
+    color: white;
+}
+
+.logo {
+    width: 160px;
+}
+
+.menu a {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #550d7c;
+}
+
+.acciones button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editar:hover {
+    background-color: #cab5df;
+}
+
+.cerrar {
+    background-color: #550d7c;
+    color: white;
+}
+
+.cerrar:hover {
+    background-color: #420762;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 30px;
+}
+
+.titulo {
+    margin-top: 1px;
+    margin-bottom: 23px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c0a3dc;
+    font-size: 26px;
+}
+
+/* Grid */
+.grid-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "usuarios estadisticas reportes"
+        "usuarios estadisticas configurar";
+    gap: 20px;
+}
+
+.usuarios {grid-area: usuarios;}
+.estadisticas {grid-area: estadisticas;}
+.reportes {grid-area: reportes;}
+.configurar {grid-area: configurar;}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+    color: #550d7c;
+}
+
+.card.configurar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gestión usuarios */
+.usuarios input {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1.6px solid #ccc;
+}
+
+.lista-usuarios {
+    margin-top: 5.5px;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-usuarios li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.lista-usuarios button {
+    padding: 6px;
+    border: none;
+    background-color: #daaff7;
+    border-radius: 6.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #550d7c;
+}
+
+.lista-usuarios button:hover {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+/* Estadísticas */
+.grafico {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#6a1b9a 70%, #e0d7ec 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+.datos {
+    list-style: circle;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.datos li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Reportes */
+.reporte {
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.reporte li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.reporte li button {
+    align-self: flex-end;
+    padding: 6px;
+    border: none;
+    background-color: #daaff7;
+    border-radius: 6.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #550d7c;
+}
+
+.reporte li button:hover {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+.configurar button {
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #e9dbf7;
+}
+
+.configurar button:hover {
+    background-color: #e1bdf8;
+}
