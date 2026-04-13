@@ -201,12 +201,13 @@ body {
 }
 
 .configurar button {
-    padding: 10px 10px;
+    padding: 10px 80px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
     border: none;
     background-color: #e9dbf7;
+    border: 3px solid #6a1b9a;
 }
 
 .configurar button:hover {
