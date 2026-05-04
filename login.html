@@ -39,6 +39,7 @@
 
             <!-- Crea un botón que envía el formulario.-->
             <button id="btn" type="submit">Ingresar</button>
+            <p id="mensaje" class="mt-3"></p>
 
             <div class="links"> <!-- Contenedor para agrupar los enlaces.-->
                 <a href="recover.html">¿Olvidaste tu contraseña?</a> <!-- Link para recuperación de contraseña.-->
@@ -51,26 +52,7 @@
 
     </main>
 
-<script>
-    document.getElementById("formulario").addEventListener("submit",
-function(event){let errores = [];
-let correo = document.getElementById("correo").value;
-let password = document.getElementById("password").value;
-
-if (correo === "") {errores.push("El campo correo electrónico es obligatorio.");}
-else if (!esEmailValido(correo)) {
-errores.push("El formato del correo es incorrecto.");}
-
-if (password === "") {errores.push("El campo contraseña es obligatorio.");}
-
-if (errores.length > 0) {event.preventDefault();
-document.getElementById("errores").innerHTML = errores.join("<br>");}
-});
-
-function esEmailValido(correo) {let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-return regex.test(email);}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
