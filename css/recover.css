@@ -74,7 +74,7 @@ button:hover {
     margin-top: 15px; 
     display: flex;
     flex-direction: column;
-    text-align: center;c /* Centrados visualmente */
+    text-align: center; /* Centrados visualmente */
 }
 
 .link { /* Estilo de los enlaces */
