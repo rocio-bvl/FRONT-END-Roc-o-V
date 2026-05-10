@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f2f2f2;
+}
+
+/* topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8d8d8d;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* layout */
+.perfil-main {
+    padding: 30px;
+}
+
+.descripcion {
+    text-align: center;
+    color:#6a6a6a;
+}
+
+.perfil-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "resumen form"
+        "resumen password";
+    gap: 20px;
+}
+
+.resumen { grid-area: resumen; }
+.form { grid-area: form; }
+.password { grid-area: password; }
+
+.perfil-main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* cards */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* resumen */
+.resumen {
+    text-align: center; /* solo para imagen y nombre */
+    padding: 20px;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* badge */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10px;
+}
+
+.badge.user { background: green; }
+.badge.coach { background: blue; }
+.badge.admin { background: red; }
+
+/* form */
+.header-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full {
+    grid-column: span 2;
+}
+
+.hint {
+    font-size: 12px;
+    color: #888;
+}
+
+.info {
+    text-align: left;     /* alinear texto a la izquierda */
+    margin-top: 20px;
+    padding-left: 15px;   /* separarlo del borde */
+}
+
+.info-password {
+    margin-top: 10px;
+    background: #eaf3ff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* errores */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* botones */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-editar {
+    background: #2980ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+}
+
+.guardar {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.guardar:hover {
+    background-color: #005600;
+    color: white;
+}
+
+.cancelar {
+    background-color: white;
+    color: black;
+    border-color: black;
+    border: 1px solid #6a6a6a;
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color:#535353;
+    color:white;
+}
+
+button:hover {
+    background-color: #bebebe;
+    color: black;
+}

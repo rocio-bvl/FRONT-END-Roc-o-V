@@ -19,11 +19,12 @@
         <a href="#">Usuarios</a>
         <a href="#">Estadísticas</a>
         <a href="#">Configuración</a>
+        <a href="perfil.html">Mi Perfil</a>
     </nav>
 
     <div class="acciones">
         <button class="editar">Editar perfil</button>
-        <button class="cerrar">Cerrar sesión</button>
+        <button class="cerrar" id="logout">Cerrar sesión</button>
     </div>
 </header>
 
@@ -33,7 +34,7 @@
     <section class="grid-admin">
 
         <!-- Gestión de Usuarios -->
-        <div class="card usuarios">
+        <section class="card usuarios">
             <h3>Gestión de Usuarios</h3>
 
             <input type="text" placeholder="Buscar usuario...">
@@ -58,10 +59,10 @@
                     <button>Editar</button>
                 </li>
             </ul>
-        </div>
+        </section>
 
         <!-- Estadísticas -->
-        <div class="card estadisticas">
+        <section class="card estadisticas">
             <h3>Estadísticas del Sistema</h3>
 
             <div class="grafico">
@@ -72,10 +73,10 @@
                     <li>Reservas activas: 58</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
         <!-- Reportes -->
-        <div class="card reportes">
+        <section class="card reportes">
             <h3>Reportes General de Ventas</h3>
 
             <ul class="reporte">
@@ -88,15 +89,16 @@
                     <button>Descargar</button>
                 </li>
             </ul>
-
-        </div>
+        </section>
         <!-- Configurar -->
-        <div class="card configurar">
+        <section class="card configurar">
             <button class="configurar">Configurar el sistema</button>
-        </div>
+        </section>
 
     </section>
 </main>
+
+<script src="script1.js"></script>
 
 </body>
 </html>

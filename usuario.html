@@ -19,12 +19,12 @@
             <a href="startpage.html">Inicio</a>
             <a href="#">Clases</a>
             <a href="#">Reservas</a>
-            <a href="#">Mi Progreso</a>
+            <a href="perfil.html">Mi Perfil</a>
         </nav>
 
-        <div class="acciones">
+        <section class="acciones">
             <button class="editar">Editar perfil</button>
-            <button class="cerrar">Cerrar sesión</button>
+            <button class="cerrar" id="logout">Cerrar sesión</button>
         </div>
     </header>
 
@@ -34,7 +34,7 @@
         <section class="grid-usuario">
 
         <!-- Perfil usuario -->
-            <div class="card perfil">
+            <section class="card perfil">
                 <h3>Mi Perfil</h3>
 
                 <div class="perfil-info">
@@ -42,10 +42,10 @@
 
                     <div class="datos">
                         <label>Nombre:</label>
-                        <div class="nombre">Ana Martínez</div>
+                        <div class="nombre" id="nombreUsuario">Cargando...</div>
 
                         <label>Email:</label>
-                        <div class="correo">anamartinez@mail.com</div>
+                        <div class="correo" id="correoUsuario">Cargando...</div>
                     </div>
                 </div>
 
@@ -57,10 +57,10 @@
                         <li>Mantener constancia</li>
                     </ul>
                 </div>
-            </div>
+            </section>
 
         <!-- Progreso -->
-            <div class="card progreso">
+            <section class="card progreso">
                 <h3>Progreso</h3>
 
                 <div class="progreso-contenido">
@@ -77,10 +77,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
         <!-- Clases disponibles -->
-            <div class="card clases">
+            <section class="card clases">
                     <h3>Clases Disponibles</h3>
 
                 <ul class="lista-clases">
@@ -97,20 +97,23 @@
                         <button>Reservar</button>
                     </li>
                 </ul>
-            </div>
+            </section>
 
         <!-- Clases reservadas -->
-            <div class="card reservas">
+            <section class="card reservas">
                 <h3>Clases Reservadas</h3>
 
                 <ul>
                     <li>CrossFit – Lunes 18:00</li>
                     <li>Yoga – Miércoles 19:00</li>
                 </ul>
-            </div>
+            </section>
 
         </section>
 
     </main>
+
+<script src="script1.js"></script>
+
 </body>
 </html>

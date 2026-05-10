@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - SportClub</title>
+
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+
+<body>
+<header class="topbar">
+    <img src="img/logo_empresa_letra_v1.png" class="logo">
+
+    <nav class="menu">
+        <a href="#" id="linkDashboard">Dashboard</a>
+        <a href="perfil.html">Mi Perfil</a>
+    </nav>
+
+    <button id="logout" class="cerrar">Cerrar sesión</button>
+</header>
+
+
+<main class="perfil-main">
+
+    <h1>Mi Perfil</h1>
+    <p class="descripcion">Gestiona tu información personal</p>
+
+    <div class="perfil-layout">
+        <!-- izquierda -->
+        <section class="card resumen">
+            <img src="img/avatar.png" class="avatar">
+
+            <h2 id="nombreUsuario">Cargando...</h2>
+            <span id="rolUsuario" class="badge">...</span> 
+            <!-- ^^ cambiar segun perfil loggeado -->
+            
+            <div class="info">
+                <p><strong>Email:</strong> <span id="emailUsuario"></span></p>
+                <p><strong>Fecha nacimiento:</strong> <span id="fechaUsuario"></span></p>
+                <p><strong>Rol:</strong> <span id="rolTexto"></span></p>
+                <p><strong>Fecha registro:</strong> <span id="registroUsuario"></span></p>
+            </div>
+        </section>
+
+        <!-- DERECHA -->
+        <section class="card form">
+
+            <div class="header-form">
+                <h2>Información Personal</h2>
+                <button id="btnEditar" class="btn-editar">Editar perfil</button>
+            </div>
+
+            <section class="grid">
+
+                <div>
+                    <label>Nombre completo</label>
+                    <input type="text" id="inputNombre">
+                    <small class="error" id="errorNombre"></small>
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" id="inputEmail">
+                    <small class="error" id="errorEmail"></small>
+                </div>
+
+                <div>
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" id="inputFecha">
+                </div>
+
+                <div>
+                    <label>Deporte favorito</label>
+                    <input type="text" id="inputDeporte">
+                </div>
+
+                <div class="full">
+                    <label>Otros / Metadata
+                        <span class="hint">(intereses, habilidades, etc.)</span>
+                    </label>
+                    <textarea id="inputMeta"></textarea>
+                </div>
+            </section>
+
+            <div class="acciones">
+                <button class="cancelar">Cancelar</button>
+                <button id="btnGuardar" class="guardar">Guardar cambios</button>
+            </div>
+        </section>
+
+    <!-- CONTRASEÑA -->
+        <section class="card password">
+
+            <h2>Cambiar Contraseña</h2>
+            <div class="grid">
+                <input type="password" placeholder="Contraseña actual">
+                <input type="password" placeholder="Nueva contraseña">
+                <input type="password" placeholder="Confirmar contraseña">
+            </div>
+
+            <p class="info-password">
+            La contraseña debe tener al menos 8 caracteres e incluir números y letras
+            </p>
+
+            <button class="guardar">Guardar cambios</button>
+        </section>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

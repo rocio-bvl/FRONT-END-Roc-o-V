@@ -17,14 +17,14 @@
         <nav class="menu">
             <a href="#">Inicio</a>
             <a href="#">Mis Alumnos</a>
-            <a href="#">Mi Horario</a>
             <a href="#">Reportes</a>
+            <a href="perfil.html">Mi Perfil</a>
         </nav>
 
-        <div class="acciones">
+        <section class="acciones">
             <button class="editar">Editar perfil</button>
-            <button class="cerrar">Cerrar sesión</button>
-        </div>
+            <button class="cerrar" id="logout">Cerrar sesión</button>
+        </section>
     </header>
 
     <main class="dashboard">
@@ -34,7 +34,7 @@
         <div class="grid-coach">
 
             <!-- Alumnos -->
-            <div class="card alumnos">
+            <section class="card alumnos">
                 <h3>Mis Alumnos</h3>
 
                 <ul class="lista-alumnos">
@@ -66,10 +66,10 @@
                         <button>Ver Progreso</button>
                     </li>
                 </ul>
-            </div>
+            </section>
 
             <!-- Horario Semanal -->
-            <div class="card horario">
+            <section class="card horario">
                     <h3>Mi Horario</h3>
 
                 <div class="horario">
@@ -106,10 +106,13 @@
                     </div>
 
                 </div>
-            </div>
+            </section>
 
         </div>
 
     </main>
+
+<script src="script1.js"></script>
+
 </body>
 </html>
