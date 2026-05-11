@@ -148,6 +148,17 @@ input, textarea {
 .error {
     color: red;
     font-size: 12px;
+    margin-top: 5px;
+}
+
+input.input-error, select.input-error {
+    border: 2px solid red !important;
+}
+
+input:disabled {
+    background-color: #f2f2f2;
+    color: #888;
+    cursor: not-allowed;
 }
 
 /* botones */

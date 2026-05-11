@@ -1,13 +1,4 @@
-// ********  a qué se refiere con manipulación del DOM
-// "Proyecto organizado en carpetas (js, css, assets, vistas)"
-// a qué se refiere con assets y vistas
-// Validaciones visuales (obligatorio) Debe cumplir:  
-// o Mensajes debajo del input 
-// o Texto en rojo 
-// o Borde rojo en inputs inválidos 
-// o Ejemplos:  
-//      ▪ “El nombre es obligatorio” 
-//      ▪ “Email inválido”
+// ********
 
 
 //==================================================
@@ -172,7 +163,8 @@ function iniciarPerfil() {
     configurarEdicion();   // 2. editar perfil (activa el botón guardar cambios)
     configurarPassword();  // 3. cambiar contraseña
     configurarDashboard(); // 4. redirección dinámica (que el dashboard vaya al rol correcto)
-}
+    configurarCancelarPerfil(); // 5. reestablecer inputs al cancelar
+} 
 
 
 // 1. CARGAR PERFIL (GET /api/auth/me)
@@ -188,6 +180,14 @@ async function cargarPerfil() {
 
         const data = await respuesta.json();
         const user = data.data; // extrae el usuario
+        // restricciones por rol
+        const inputEmail = document.getElementById("inputEmail");
+        // si es usuario normal
+        if (user.role === "user") {
+            inputEmail.disabled = true; // no puede editar email
+        } else {
+        inputEmail.disabled = false;
+        }
 
         // mostrar datos en el perfil
         document.getElementById("nombreUsuario").textContent =
@@ -243,31 +243,45 @@ function configurarEdicion() { // prepara el botón guardar
 } // al hacer click, ejecuta guardarPerfil. ?. evita error si no existe
 
 async function guardarPerfil() {
-    const nombre = document.getElementById("inputNombre").value.trim(); // obtiene nombre sin espacios extra
-    const email = document.getElementById("inputEmail").value.trim();
+    const nombre = document.getElementById("inputNombre"); // obtiene nombre sin espacios extra
+    const email = document.getElementById("inputEmail");
     const fecha = document.getElementById("inputFecha").value;
 
     const errorNombre = document.getElementById("errorNombre");
     const errorEmail = document.getElementById("errorEmail");
+
+    const valorNombre = nombre.value.trim();
+    const valorEmail = email.value.trim();
+
+    // limpiar errores antes
+    nombre.classList.remove("input-error");
+    email.classList.remove("input-error");
+
+    errorNombre.textContent = "";
+    errorEmail.textContent = "";
+
     let valido = true; // variable para validar
 
     // validación visual
-    if (nombre === "") {
+    if (valorNombre === "") {
         errorNombre.textContent = "El nombre es obligatorio";
+        nombre.classList.add("input-error");
         valido = false;
-    } 
-    else {
-        errorNombre.textContent = "";
     }
-    if (!email.includes("@")) {
-        errorEmail.textContent = "Email inválido";
+
+    if (valorEmail === "") {
+        errorEmail.textContent = "El email es obligatorio";
+        email.classList.add("input-error");
         valido = false;
-    } 
-    else {
-        errorEmail.textContent = "";
+    }
+    else if (!valorEmail.includes("@")) {
+        errorEmail.textContent = "Email inválido";
+        email.classList.add("input-error");
+        valido = false;
     }
 
     if (!valido) return; // si hay error detiene todo
+
     try {
         const token = localStorage.getItem("token");
         const respuesta = await fetch("http://localhost:3000/api/auth/me", {
@@ -277,8 +291,8 @@ async function guardarPerfil() {
                 "Authorization": "Bearer " + token
             },
             body: JSON.stringify({
-                full_name: nombre,
-                email: email,
+                full_name: valorNombre,
+                email: inputEmail.disabled ? undefined : valorEmail,
                 birth_date: fecha,
             }) // datos actualizados
         });
@@ -396,6 +410,31 @@ function configurarDashboard() {
 }
 
 
+// 5. REESTABLECER DATOS AL CANCELAR
+function configurarCancelarPerfil() {
+    const btn = document.getElementById("btnCancelarPerfil");
+    btn?.addEventListener("click", () => {
+        cancelarEdicionPerfil();
+    });
+}
+
+function cancelarEdicionPerfil() {
+    // volver a cargar datos originales desde backend
+    cargarPerfil();
+    // limpiar errores visuales
+    const nombre = document.getElementById("inputNombre");
+    const email = document.getElementById("inputEmail");
+
+    const errorNombre = document.getElementById("errorNombre");
+    const errorEmail = document.getElementById("errorEmail");
+
+    errorNombre.textContent = "";
+    errorEmail.textContent = "";
+
+    nombre.classList.remove("input-error");
+    email.classList.remove("input-error");
+}
+
 
 
 
@@ -472,32 +511,71 @@ function configurarCrear() { // prepara el botón guardar
 
 async function crearUsuario() { // función que envía los datos al backend
     // obtienen los valores de los inputs:
-    const nombre = document.getElementById("nuevoNombre").value;
-    const email = document.getElementById("nuevoEmail").value;
+    const inputNombre = document.getElementById("nuevoNombre");
+    const inputEmail = document.getElementById("nuevoEmail");
+    const inputPassword = document.getElementById("nuevoPassword");
+    const inputConfirm = document.getElementById("confirmPassword");
+
+    const nombre = inputNombre.value.trim();
+    const email = inputEmail.value.trim();
     const rol = document.getElementById("nuevoRol").value;
-    const password = document.getElementById("nuevoPassword").value;
-    const confirm = document.getElementById("confirmPassword").value;
+    const password = inputPassword.value;
+    const confirm = inputConfirm.value;
+
+    // obtener mensajes de error
+    const errorNombre = inputNombre.nextElementSibling;
+    const errorEmail = inputEmail.nextElementSibling;
+    const errorPassword = inputPassword.nextElementSibling;
+    const errorConfirm = inputConfirm.nextElementSibling;
+
+    // limpiar errores antes
+    [inputNombre, inputEmail, inputPassword, inputConfirm].forEach(i => i.classList.remove("input-error"));
+    [errorNombre, errorEmail, errorPassword, errorConfirm].forEach(e => e.textContent = "");
+
+    let valido = true;
 
     // validaciones
-    if (!nombre || !email || !password || !confirm) {
-        alert("Todos los campos son obligatorios");
-        return;
+    if (nombre === "") {
+        errorNombre.textContent = "El nombre es obligatorio";
+        inputNombre.classList.add("input-error");
+        valido = false;
     }
 
-    if (!email.includes("@")) {
-        alert("Email inválido");
-        return;
+    if (email === "") {
+        errorEmail.textContent = "El email es obligatorio";
+        inputEmail.classList.add("input-error");
+        valido = false;
+    }
+    else if (!email.includes("@")) {
+        errorEmail.textContent = "Email inválido";
+        inputEmail.classList.add("input-error");
+        valido = false;
     }
 
-    if (password.length < 8) {
-        alert("Contraseña mínima 8 caracteres");
-        return;
+    if (password === "") {
+        errorPassword.textContent = "La contraseña es obligatoria";
+        inputPassword.classList.add("input-error");
+        valido = false;
+    }
+    else if (password.length < 8) {
+        errorPassword.textContent = "Contraseña mínima 8 caracteres";
+        inputPassword.classList.add("input-error");
+        valido = false;
     }
 
-    if (password !== confirm) {
-        alert("Las contraseñas no coinciden");
-        return;
+    if (confirm === "") {
+        errorConfirm.textContent = "Debe confirmar la contraseña";
+        inputConfirm.classList.add("input-error");
+        valido = false;
     }
+    else if (password !== confirm) {
+        errorConfirm.textContent = "Las contraseñas no coinciden";
+        inputConfirm.classList.add("input-error");
+        valido = false;
+    }
+
+    // detener si hay errores
+    if (!valido) return;
 
     try {
         const token = localStorage.getItem("token");
@@ -588,10 +666,25 @@ document.getElementById("btnGuardar").textContent = "Guardar cambios";
 
 // botón cancelar
 function limpiarFormulario() {
-    document.getElementById("nuevoNombre").value = "";
-    document.getElementById("nuevoEmail").value = "";
-    document.getElementById("nuevoPassword").value = "";
-    document.getElementById("confirmPassword").value = "";
+    const nombre = document.getElementById("nuevoNombre");
+    const email = document.getElementById("nuevoEmail");
+    const password = document.getElementById("nuevoPassword");
+    const confirm = document.getElementById("confirmPassword");
+
+    // limpiar inputs
+    nombre.value = "";
+    email.value = "";
+    password.value = "";
+    confirm.value = "";
+
+    // limpiar errores
+    const errores = document.querySelectorAll(".formulario").querySelectorAll(".error");
+    errores.forEach(e => e.textContent = "");
+
+    // quitar borde rojo
+    [nombre, email, password, confirm].forEach(i =>
+        i.classList.remove("input-error")
+    );
 
     // volver a modo crear
     idEditando = null;

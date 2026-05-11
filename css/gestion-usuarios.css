@@ -188,6 +188,11 @@ td {
     margin-top: 5px;
 }
 
+/* borde rojo en error */
+.input-error {
+    border-color: red !important;
+}
+
 /* inputs y selects */
 input, select {
     width: 100%;
