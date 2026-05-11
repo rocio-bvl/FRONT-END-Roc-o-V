@@ -16,7 +16,7 @@
     <img src="img/logo_empresa_letra_v1.png" class="logo">
 
     <nav class="menu">
-        <a href="#" id="linkDashboard">Dashboard</a>
+        <a href="#" id="dashboardLink">Dashboard</a>
         <a href="perfil.html">Mi Perfil</a>
     </nav>
 
@@ -32,7 +32,7 @@
     <div class="perfil-layout">
         <!-- izquierda -->
         <section class="card resumen">
-            <img src="img/avatar.png" class="avatar">
+            <img src="img/avatar-default.png" id="fotoUsuario" class="avatar">
 
             <h2 id="nombreUsuario">Cargando...</h2>
             <span id="rolUsuario" class="badge">...</span> 
@@ -73,16 +73,11 @@
                     <input type="date" id="inputFecha">
                 </div>
 
-                <div>
-                    <label>Deporte favorito</label>
-                    <input type="text" id="inputDeporte">
-                </div>
-
                 <div class="full">
                     <label>Otros / Metadata
                         <span class="hint">(intereses, habilidades, etc.)</span>
                     </label>
-                    <textarea id="inputMeta"></textarea>
+                    <div id="inputMeta" class="meta-display">Cargando...</div>
                 </div>
             </section>
 
@@ -97,21 +92,21 @@
 
             <h2>Cambiar Contraseña</h2>
             <div class="grid">
-                <input type="password" placeholder="Contraseña actual">
-                <input type="password" placeholder="Nueva contraseña">
-                <input type="password" placeholder="Confirmar contraseña">
+                <input id="passActual" type="password" placeholder="Contraseña actual">
+                <input id="passNueva" type="password" placeholder="Nueva contraseña">
+                <input id="passConfirmar" type="password" placeholder="Confirmar contraseña">
             </div>
 
             <p class="info-password">
             La contraseña debe tener al menos 8 caracteres e incluir números y letras
             </p>
 
-            <button class="guardar">Guardar cambios</button>
+            <button id="btnPassword" class="guardar">Guardar cambios</button>
         </section>
     </div>
 </main>
 
-<script src="script.js"></script>
+<script src="script1.js"></script>
 
 </body>
 </html>

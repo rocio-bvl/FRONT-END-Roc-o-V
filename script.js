@@ -55,6 +55,8 @@ async function login(correo, password) {
 
         if (respuesta.ok && data.data && data.data.user) {
             mensaje.textContent = "Login exitoso";
+            // guarda token en navegador
+            localStorage.setItem("token", data.data.token);
 
             const rol = data.data.user.role;
             console.log("ROL:",data.data.user.role);
@@ -77,9 +79,4 @@ async function login(correo, password) {
         mensaje.textContent = "Error de conexión";
     }
 }
-
-
-
-//----------------------- -----------------------
-
 

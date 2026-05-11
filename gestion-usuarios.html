@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=es>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+
+    <link rel="stylesheet" href="css/gestion-usuarios.css">
+</head>
+
+
+<body>
+<header class="topbar">
+    <img src="img/logo_empresa_letra_v1.png" class="logo">
+
+    <nav>
+        <a href="admin.html">Dashboard</a>
+        <a href="gestion-usuarios.html" class="activo">Usuarios</a>
+        <a href="perfil.html">Mi Perfil</a>
+    </nav>
+
+    <button id="logout">Cerrar sesión</button>
+</header>
+
+
+<main class="container">
+    <section class="header">
+        <div>
+            <h1>Gestión de Usuarios</h1>
+            <p>Administra los usuarios del sistema</p>
+        </div>
+
+        <button class="btn-nuevo">+ Nuevo Usuario</button>
+    </section>
+    <!-- TABLA -->
+    <section class="card">
+        <h2>Lista de Usuarios</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Completo</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Fecha Registro</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                <!-- Se llena con JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <!--  FORMULARIO -->
+    <section class="card formulario">
+        <h2>Nuevo Usuario</h2>
+        <div class="grid-form">
+            <div>
+                <label>Nombre completo</label>
+                <input type="text" id="nuevoNombre">
+                <small class="error"></small>
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" id="nuevoEmail">
+                <small class="error"></small>
+            </div>
+
+            <div>
+                <label>Rol</label>
+                <select id="nuevoRol">
+                    <option value="user">User</option>
+                    <option value="coach">Coach</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Contraseña</label>
+                <input type="password" id="nuevoPassword">
+                <small class="error"></small>
+            </div>
+
+            <div>
+                <label>Confirmar contraseña</label>
+                <input type="password" id="confirmPassword">
+                <small class="error"></small>
+            </div>
+        </div>
+
+        <div class="acciones-form">
+            <button id="btnCancelar" class="cancelar">Cancelar</button>
+            <button id="btnGuardar" class="guardar">Guardar</button>
+        </div>
+    </section>
+</main>
+
+<script src="script1.js"></script>
+
+</body>
+</html>

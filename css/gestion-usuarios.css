@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+/* topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8008c1;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    width: 140px;
+}
+
+.topbar nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topbar nav .activo {
+    border-bottom: 3.5px solid #ffd24d;
+}
+
+.topbar nav a:hover {
+    text-decoration: underline;
+    color: #550d7c;
+}
+
+.topbar button {
+    cursor: pointer;
+    background-color: #550d7c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+.topbar button:hover {
+    background-color: #420762;
+}
+
+/* contenedor */
+.container {
+    padding: 30px;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    color:#6a6a6a;
+}
+
+.btn-nuevo {
+    background: #2e80ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-nuevo:hover {
+    background: #144a9c;
+}
+
+/* card */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+}
+
+.user { background: green; }
+.coach { background: blue; }
+.admin { background: red; }
+
+/* acciones */
+.acciones button {
+    margin-right: 5px;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.editar {
+    background: #2e80ff;
+    color: white;
+}
+
+.eliminar {
+    background: red;
+    color: white;
+}
+
+/* formulario */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.acciones-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.cancelar {
+    background: white;
+    border: 2px solid #ccc;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: bold;
+}
+
+.cancelar:hover {
+    background: #ccc;
+}
+
+.guardar {
+    background: #2e80ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.guardar:hover {
+    background: #144a9c;
+}
+
+/* errores */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* inputs y selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box; /* evita que se desborde */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* efecto al hacer foco */
+input:focus, select:focus {
+    outline: none;
+    border-color: #2e80ff;
+    box-shadow: 0 0 0 2px rgba(46, 128, 255, 0.2);
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.grid-form div {
+    display: flex;
+    flex-direction: column;
+}
